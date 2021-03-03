@@ -28,7 +28,7 @@ namespace AntiqueShop
         static List<AntiqueItem> GetAntiqueItems()
         {
             // NOTE: This code shows multiple ways to set properties and to add items to a list
-            // In a real app you SHOULD BE CONSISTENT in
+            // In a real app you SHOULD BE CONSISTENT
             AntiqueItem chair = new AntiqueItem()
             {
                 Name = "An old chair",
