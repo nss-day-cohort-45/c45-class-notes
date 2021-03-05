@@ -17,6 +17,11 @@ Linq
   * Linq doesn't completely replace loops
   * Understanding loops and if statements is ESSENTIAL to understanding linq
   * Understanding linq will be useful when it comes time to interview for job
+  * Two syntaxes for Linq
+    * Method Syntax
+      * This is just calling methods like you'd expect
+    * Query Syntax
+      * this is designed to look more like SQL
 
 ## Resources
 

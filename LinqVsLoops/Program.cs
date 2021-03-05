@@ -18,6 +18,10 @@ List<ProgrammingLanguage> langs = GetSomeProgrammingLanguages();
 // Select
 //  "Select" is like "map" in javascript
 
+Console.WriteLine("-------------------");
+Console.WriteLine("Select");
+Console.WriteLine("-------------------");
+
 // Loop Way
 List<string> creators = new List<string>();
 foreach (ProgrammingLanguage lang in langs)
@@ -33,6 +37,10 @@ PrintStrings(linqCreators);
 // ----------------------------------------------------------------------
 // Where
 // "Where is like "filter" in javascript
+
+Console.WriteLine("-------------------");
+Console.WriteLine("Where");
+Console.WriteLine("-------------------");
 
 // Loop Way
 List<ProgrammingLanguage> compiled = new List<ProgrammingLanguage>();
@@ -123,24 +131,74 @@ Console.WriteLine($"linqCanAllLangsGetWorkDone: {linqCanAllLangsGetWorkDone}");
 
 // ----------------------------------------------------------------------
 // Any
+// "Any" is like "some" in javascript
 
-// Long Way
+Console.WriteLine("-------------------");
+Console.WriteLine("Any");
+Console.WriteLine("-------------------");
+
+// Loop Way
+bool areAnyNamedGrace = false; // note we start with assming there aren't any
+foreach (ProgrammingLanguage lang in langs)
+{
+    if (lang.Creator.Contains("Grace"))
+    {
+        areAnyNamedGrace = true;
+        break;
+    }
+}
+Console.WriteLine($"areAnyNamedGrace: {areAnyNamedGrace}");
 
 // Linq Way
+bool linqAreAnyNamedGrace = langs.Any(lang => lang.Creator.Contains("Grace"));
+Console.WriteLine($"linqAreAnyNamedGrace: {linqAreAnyNamedGrace}");
 
 // ----------------------------------------------------------------------
 // Skip
+// There's not an equivalent array method in javascript
+//   ...though you could probably hack something together with "slice"
 
-// Long Way
+// "Skip" will jump past some number of elements in the collection and then return the rest
+
+Console.WriteLine("-------------------");
+Console.WriteLine("Skip");
+Console.WriteLine("-------------------");
+
+// Loop Way
+List<ProgrammingLanguage> allButFirstTwo = new List<ProgrammingLanguage>();
+for (int i = 2; i < langs.Count; i++) // note the "i" variable starts at 2
+{
+    ProgrammingLanguage lang = langs[i];
+    allButFirstTwo.Add(lang);
+}
+PrintLanguages(allButFirstTwo);
 
 // Linq Way
+List<ProgrammingLanguage> linqAllButFirstTwo = langs.Skip(2).ToList();
+PrintLanguages(linqAllButFirstTwo);
 
 // ----------------------------------------------------------------------
 // Take
+// There's not an equivalent array method in javascript
+//   ...though you could probably hack something together with "slice"
+
+// "Take" will take the first few elements from the collection and ignore the rest
+
+Console.WriteLine("-------------------");
+Console.WriteLine("Take");
+Console.WriteLine("-------------------");
 
 // Long Way
+List<ProgrammingLanguage> firstThree = new List<ProgrammingLanguage>();
+for (int i = 0; i < 3; i++) // Note the "i" variable ends at 2 (it moves through 0, 1, 2)
+{
+    ProgrammingLanguage lang = langs[i];
+    firstThree.Add(lang);
+}
 
 // Linq Way
+List<ProgrammingLanguage> linqFirstThree = langs.Take(3).ToList();
+PrintLanguages(linqFirstThree);
 
 // ----------------------------------------------------------------------
 // OrderBy
@@ -197,6 +255,21 @@ PrintStrings(names);
 //  Query Syntax
 // ----------------------------------------------------------------------
 
+// The above code all uses what's called the "method" syntax. It's generally proferfed, 
+//  but you'll also see the "query" syntax from time to time.
+
+// List the names of the compiled programming languages in order of creation
+IEnumerable<string> queryNames =
+    from lang in langs
+    where lang.IsCompiled
+    orderby lang.YearCreated
+    select lang.Name;
+
+// Yep, you still have to call tolist
+List<string> queryNamesAsList = queryNames.ToList();
+
+PrintStrings(queryNamesAsList);
+
 // ----------------------------------------------------------------------
 //  Some other Linq methods to explore
 // ----------------------------------------------------------------------
@@ -206,8 +279,11 @@ PrintStrings(names);
 // Reverse
 // Distinct
 // GroupBy
+// SkipWhile
+// TakeWhile
 // Single
 // SingleOrDefault
+// ...there are others...
 
 // ----------------------------------------------------------------------
 //  Helper functions
