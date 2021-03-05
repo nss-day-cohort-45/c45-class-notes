@@ -4,7 +4,19 @@ This program is a series of comparisons of Linq methods vs equivalent code done 
 
 ## Notes
 
+Linq
 
+* Language Integrated Query
+  * A set of methods on collections that let us query and manipulate collections
+  * Often a more concise approach to working with collection than loops
+  * In order to use linq, you have to use a  `using System.Linq;` statement
+  * Linq methods are very similar to javascript array methods
+    * that (very) different names
+    * same goals though
+  * Name of many linq methods are inspired by SQL
+  * Linq doesn't completely replace loops
+  * Understanding loops and if statements is ESSENTIAL to understanding linq
+  * Understanding linq will be useful when it comes time to interview for job
 
 ## Resources
 
