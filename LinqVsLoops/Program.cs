@@ -269,7 +269,7 @@ IEnumerable<string> queryNames =
     orderby lang.YearCreated
     select lang.Name;
 
-// Yep, you still have to call tolist
+// Yep, you still have to call ToList()
 List<string> queryNamesAsList = queryNames.ToList();
 
 PrintStrings(queryNamesAsList);
