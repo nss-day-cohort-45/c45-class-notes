@@ -258,6 +258,10 @@ PrintStrings(names);
 // The above code all uses what's called the "method" syntax. It's generally proferfed, 
 //  but you'll also see the "query" syntax from time to time.
 
+Console.WriteLine("-------------------");
+Console.WriteLine("Query Syntax");
+Console.WriteLine("-------------------");
+
 // List the names of the compiled programming languages in order of creation
 IEnumerable<string> queryNames =
     from lang in langs
