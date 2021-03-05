@@ -2,3 +2,4 @@
 
 * [Vocabulary](./vocabulary.md)
 * [AntiqueShop Classes Exercise](./AntiqueShop)
+* [LINQ vs Loops](./LinqVsLoops)
