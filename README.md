@@ -4,3 +4,4 @@
 * [AntiqueShop Classes Exercise](./AntiqueShop)
 * [LINQ vs Loops](./LinqVsLoops)
 * [Exceptions and Try/Catch](./ExceptionsAndTryCatch)
+* [SQL Intro](./SQL)
