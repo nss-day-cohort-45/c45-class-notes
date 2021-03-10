@@ -72,3 +72,5 @@
   * Also has features to Create and Delete tables
   * Declarative language
     * You tell the database **what** you want now **how** to give it to you
+
+
