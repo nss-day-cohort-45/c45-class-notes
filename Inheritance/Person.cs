@@ -8,7 +8,7 @@ namespace Inheritance
         public int Age { get; set; }
         public string SlackHandle { get; set; }
 
-        public void PrintDescription()
+        public virtual void PrintDescription()
         {
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Age: {Age}");

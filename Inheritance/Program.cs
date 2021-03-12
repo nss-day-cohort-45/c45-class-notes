@@ -9,6 +9,18 @@ namespace Inheritance
         {
             Console.WriteLine("Some Students and Instructors");
 
+            Student betty = new Student() {
+                Age = 10,
+                Name = "Betty",
+                SlackHandle = "@youbettya",
+                Grade = "5th",
+            };
+
+            betty.Learn("soap carving");
+            betty.AskQuestion();
+            betty.PrintDescription();
+            betty.PrintStudentDescription();
+
             Student roy = new Student()
             {
                 Name = "Roy",
@@ -45,16 +57,33 @@ namespace Inheritance
                 SlackHandle = "@pat",
             };
 
+            leon.Teach(betty);
+            pat.Teach(betty);
+            rita.Teach(betty);
+            string judgement = rita.JudgeStudent(betty);
+            Console.WriteLine(judgement);
+
+
+            leon.PrintDescription();
+
             Person someGeneridPerson = new Person() {
                 Name = "Rando",
                 Age = 91,
                 SlackHandle = "@notonslack",
             };
+            someGeneridPerson.PrintDescription();
+
+
+            ShowDetails(someGeneridPerson);
+            ShowDetails(betty);
+            ShowDetails(leon);
         }
 
         static void ShowDetails(Person person)
         {
+            Console.WriteLine("-----------------------");
             person.PrintDescription();
+            Console.WriteLine("-----------------------");
         }
     }
 }

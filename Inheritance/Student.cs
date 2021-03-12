@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Inheritance
@@ -11,6 +12,23 @@ namespace Inheritance
         public void Learn(string lesson)
         {
             Knowledge.Add(lesson);
+        }
+
+        public void AskQuestion()
+        {
+            Console.WriteLine("But, why???");
+        }
+
+        public override void PrintDescription()
+        {
+            base.PrintDescription();
+            Console.WriteLine($"Grade: {Grade}");
+        }
+
+        public void PrintStudentDescription()
+        {
+            base.PrintDescription();
+            Console.WriteLine($"Grade: {Grade}");
         }
     }
 }

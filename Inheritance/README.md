@@ -39,3 +39,18 @@
     * child class is also known as a "sub class" or a "derived class"
     * parent class is also known as a "super class" or a "base class"
   * The model of inheritance in programming is one of a child inheriting genetic traits from their parent
+  * use a `:` to denote an inheritance relationship
+    * `class FooChild : BarParent `
+  * Overriding methods and properties
+    * in the parent class you must mark the method or property as `virtual`
+    * in the child class you must mark the method or property as `override`
+  * "Single Inheritance" - In C# a class can only **directly** inherit from  _one_ class.
+    * However, it is **not** required that a class inherit from another class
+
+* polymorphism
+  * "many forms"
+  * refers to the ability to use an instance of a child class where an instance of a parent class is expected.
+
+**Class Diagram Example**
+
+![class diagram](./class-diagram.png)
