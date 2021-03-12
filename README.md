@@ -5,3 +5,4 @@
 * [LINQ vs Loops](./LinqVsLoops)
 * [Exceptions and Try/Catch](./ExceptionsAndTryCatch)
 * [SQL Intro](./SQL)
+* [Ineritance, etc...](./Inheritance)
