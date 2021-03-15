@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+
 namespace Inheritance
 {
-    public class Instructor : Person
+    public class Instructor : Person, ILearner
     {
         public string Specialty { get; set; }
         public string Email { get; set; }
+
+        public List<string> Knowledge { get; set; } = new List<string>();
 
         public void Teach(Student student)
         {
@@ -28,6 +32,11 @@ namespace Inheritance
             {
                 return $"{student.Name} knows some stuff.";
             }
+        }
+
+        public void Learn(string lesson)
+        {
+            Knowledge.Add(lesson);
         }
     }
 }

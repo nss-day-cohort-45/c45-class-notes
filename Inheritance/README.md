@@ -1,4 +1,4 @@
-# Abstraction, Modeling and Inheritance, Oh My!
+# Abstraction, Modeling, Inheritance and Interfaces... Oh My!
 
 ## Notes
 
@@ -51,6 +51,24 @@
   * "many forms"
   * refers to the ability to use an instance of a child class where an instance of a parent class is expected.
 
-**Class Diagram Example**
+**Class Diagram - Inheritance**
 
-![class diagram](./class-diagram.png)
+![class diagram - Inheritance](./class-diagram.png)
+
+
+**Interfaces**
+
+* Interfaces
+  * define properties and methods that a class MUST implement
+    * not used for fields
+  * a "contract" the class must adhere to
+  * **an interface creates a new "type"**
+    * this means a variable can be of an interface type
+  * all properties and methods are public, so we don't use the world `public`
+  * Class can implement multiple interfaces
+    * but inherit from only one other class
+
+
+**Class Diagram - Interfaces**
+
+![class diagram - interfaces](./class-diagram-interfaces.png)

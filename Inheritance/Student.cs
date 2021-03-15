@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Inheritance
 {
-    public class Student : Person
+    public class Student : Person, ILearner
     {
         public string Grade { get; set; }
 
