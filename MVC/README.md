@@ -83,6 +83,7 @@ You can find the code in the `DogGo` folder.
   * Alternatives to ADO.NET
     * Entity Framework, NHibernate, Dapper
       * ORM
+
 * ASP.NET Core
   * Web framework from Microsoft
   * Used to build web applications
@@ -134,3 +135,16 @@ You can find the code in the `DogGo` folder.
       * `ViewResult`
       * `NotFoundResult`
       * `RedirectToActionResult`
+
+* MVC in a nutshell
+  * Models
+    * Classes that represent the data in a system
+    * _Most of the time_ there is one model class for each database table
+  * Controllers
+    * Classes responsible for handling HTTP requests form clients (web browsers)
+    * Controller methods are often responsible for either getting data or saving data
+    * Controller methods get and/or save data using models and repositories _(and possible other classes)_.
+  * Views
+    * Views are responsible for visually displaying data or displaying forms for inputting new data
+    * In ASP.NET Core MVC views are Razor Templates (`*.cshtml`) files that contain both HTML and C# code
+
