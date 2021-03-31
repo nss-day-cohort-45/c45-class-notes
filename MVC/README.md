@@ -35,7 +35,13 @@ ASP<span>.</span>NET Core is Microsoft web application framework. It is the coll
 
 ![server rendered](./server-rendered.png)
 
-### MVC Request / Response Flow
+### Q & A Notes
+
+These are the notes that resulted from the Q&A session we had on March 31st. The questions can be found here: https://github.com/nss-day-cohort-45/c45-class-notes/projects/1?fullscreen=true
+
+The topics listed below are complex. It is very unlikely that anyone could fully grasp all of them by the time they complete the NSS coursework. The goal should be to pick up a little bit more each time you explore the subjects.
+
+#### MVC Request / Response Flow
 
 This is the flow for a request to `/walkers/details/3`
 
@@ -61,8 +67,7 @@ You can find the code in the `DogGo` folder.
 1. ASP.NET Core (server) sends this Response back down to the browser (client)
 1. The browser reads the HTML and generates the web page.
 
-
-### Q & A Notes
+#### Other Topics
 
 * ADO.NET
   * The set of classes provided by .NET to interact with a relational database
@@ -148,3 +153,14 @@ You can find the code in the `DogGo` folder.
     * Views are responsible for visually displaying data or displaying forms for inputting new data
     * In ASP.NET Core MVC views are Razor Templates (`*.cshtml`) files that contain both HTML and C# code
 
+* Dependency Injection
+  * Some concrete aspects:
+    * This is the purpose of using the `services.AddTransient()` method in the `Startup.cs` file
+    * This is also the purpose of using interfaces for our repositories
+  * Dependency Injection is a term used to refer to using constructor parameters to pass objects into other objects
+  * Example:
+    * The `OwnersController` is a class that needs to use an `OwnerRepository` to get data from the database.
+    * We say that the `OwnersController` "depends" upon the `OwnerRepository` to get its work done
+    * By listing an `IOwnerRepository` as a constructor parameter, the `OwnersController` is saying that it must have an instance of the repository "injected" into it.
+  * When using Dependency Injection it is common to make use of interfaces. One benefit of using interfaces is that it's relatively easy to replace the underlying concrete class
+    * This use of interfaces is related to the concept of "decoupling"
