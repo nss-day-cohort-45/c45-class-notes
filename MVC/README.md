@@ -113,7 +113,6 @@ You can find the code in the `DogGo` folder.
     * Literally the command `dotnet`
     * This is similar to the way that the "runtime environment" for javascript is the web browser.
 
-
 * Where do you start when building an app?
   * Pick a "vertical slice" and write the code you need to make that work
     * Model
@@ -164,3 +163,13 @@ You can find the code in the `DogGo` folder.
     * By listing an `IOwnerRepository` as a constructor parameter, the `OwnersController` is saying that it must have an instance of the repository "injected" into it.
   * When using Dependency Injection it is common to make use of interfaces. One benefit of using interfaces is that it's relatively easy to replace the underlying concrete class
     * This use of interfaces is related to the concept of "decoupling"
+
+#### Interview Prep
+
+Here are some interview questions encountered by C39 grads
+
+https://docs.google.com/document/d/1H8D8Lk3EbTb2db_U7Bu79F4CNf5I_8IbGgmL2uQ7PPg/edit
+
+And a document created by our very own, Stephanie
+
+https://docs.google.com/document/d/1IbZX4ekyZe9qwo9hxEkZ6nl9_eorLNaFj7fUtZi3Brs/edit
