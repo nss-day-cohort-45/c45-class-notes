@@ -41,3 +41,55 @@
 * Postman is an external tool that can be used to test APIs too
 * CORS is a security feature that prevents a JavaScript client from communicating with a Web API server _unless the server **explicitly** grants it permission_. It's usually ok to turn CORS off for development, but it's usually not ok to turn it off in production.
   * CORS can be disabled in the `Startup.cs` `Configure` method
+
+## Q&A
+
+* Deploying a .net app
+  * serve up a web app using a web server
+    * Kestrel
+    * IIS
+    * Other web servers 
+      * nginx
+      * apache
+  * Deploy to a cloud
+    * Azure - MS cloud
+      * the simplest
+    * AWS - Amazon
+    * GCP - Google
+    * Heroku
+
+* int?
+  * a nullable int
+  * some types in C# can't be null
+  * but put a ? after the and they become "nullable"
+
+* Client vs Server Side rendering
+  * Client side rendering
+    * using javascript in a browser to generate HTML
+    * Advantages
+      * Rich user experience
+      * No full page refreshes
+      * Improved perceived performance
+    * Disadvantages
+      * more complex to build
+      * initial load of the page is slower
+  * Server side rendering
+    * using a server-side language (ex. C#) to generate HTML
+    * Advantages
+      * faster to build
+      * stick to a single language
+    * Disadvantages
+      * less flexible user experience
+      * full page refreshes
+      * slower perceived performance
+
+* Utility / "helper" classes
+  * "static" classes that contain a bunch of useful functions
+  * some people would say this is an anti-pattern
+  * but they are very commonly used and can be useful
+  * Examples
+    * DbUtils
+    * String utility class
+      * Title Case
+  * Extension Methods
+
