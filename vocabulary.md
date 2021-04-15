@@ -171,3 +171,83 @@ num = "this is not a number";
   * methods are determined by their parameters
 * Overriding
   * when a child class re-implements a methods from a parent class
+
+## April 15
+
+* Software development
+  * Is problem solving, often with a computer, often by writing software, but not always.
+* Key / Value Pairs
+  * a fundamental pattern in software
+  * values are data, "real" things, numbers, text, objects, arrays
+  * keys are names for those values
+  * Examples
+    * variables in our programming languages
+    * props in react
+    * query string parameters
+    * dictionaries in C# / object in javascript
+* Classes vs Objects
+  * Class is one way of defining a "type"
+    * Interface is another way to define a type
+  * A "type" is set of constraints on an object
+    * the "boolean" type specifies that only "true" and "false" are valid values
+    * the "int" type specifies that the value must be a positive or negative whole number
+    * In C# a "type" defines the properties and methods that an object must have
+  * objects are instances of classes
+  * classes and interfaces "live" in our source code
+  * objects "live" in the running program
+    * physically take up space in a computer's memory
+* .NET
+  * Programming languages
+    * C#
+    * Visual Basic .NET (VB.NET)
+    * F#
+    * .NET provides _compilers_ for these languages
+      * a compiler turns source code in to something that can be executed
+      * In .net the compiler generates "Intermediate language" (IL), this a type of "byte code"
+      * the term "build" is often used to refer compiling
+  * A runtime that executes IL code
+    * Common Language Runtime (CLR)
+  * A set of libraries / classes that provide common, useful functionality
+    * Base Class Library (BCL)
+    * List<>, Dictionary<>, string, int
+* ASP.NET Core
+  * Is the set of classes that we use to build web applications
+  * It is a web application framework
+  * Examples
+    * Controller, ControllerBase
+    * IConfiguration
+    * Startup
+    * Views
+* Framework vs Library
+  * both refer to code other people wrote that we can use for our programs
+  * A Library is code the your code calls
+    * Example
+      * ADO.NET
+        * our code creates SqlConnection, etc... and uses them
+  * A Framework is code that calls your code
+    * Example
+      * ASP.NET Core
+        * we write Controllers, but ASP.NET invokes those controllers
+* Web API
+  * REST
+  * An API that is access with HTTP verbs
+  * Often uses JSON, but might e XML
+* JWT
+  * JSON Web Token
+  * Used to identify a user of a Web API
+* Databases
+  * DBMS
+    * Database Management System
+  * Relational
+    * SQL
+    * Tables
+    * Relationships
+      * Primary and Foriegn Keys
+  * NoSQL
+    * A general term for databases that aren't relational
+    * Some types of NoSQL Databases
+      * Document
+      * Key / Value
+      * Columnar
+      * Graph
+
