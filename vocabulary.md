@@ -250,4 +250,3 @@ num = "this is not a number";
       * Key / Value
       * Columnar
       * Graph
-
